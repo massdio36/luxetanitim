@@ -3,58 +3,61 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Lax Media — Reklam & İşletme Tanıtımı</title>
-  <meta name="description" content="Lax Media— Sade ama lüks hissettiren reklam ve işletme tanıtım sitesi." />
+  <title>LuxeTanıtım — Reklam & İşletme Tanıtımı</title>
+  <meta name="description" content="LuxeTanıtım — sade ama lüks hissettiren reklam ve işletme tanıtım sitesi." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{--bg:#060609;--card:rgba(255,255,255,0.03);--gold:#c69b47;--muted:rgba(255,255,255,0.6);--glass:rgba(255,255,255,0.03);--container:1100px}
+    :root{
+      --bg:#060609;
+      --card:rgba(255,255,255,0.03);
+      --gold:#c69b47;
+      --muted:rgba(255,255,255,0.6);
+      --container:1100px
+    }
     *{box-sizing:border-box}
     html,body{height:100%}
-    body{margin:0;font-family:Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial;color:#fff;background:linear-gradient(180deg,#050508 0%, #0b0b10 100%);-webkit-font-smoothing:antialiased}
+    body{
+      margin:0;
+      font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;
+      color:#fff;
+      background:linear-gradient(180deg,#050508 0%,#0b0b10 100%);
+      -webkit-font-smoothing:antialiased
+    }
     .wrap{max-width:var(--container);margin:36px auto;padding:28px}
-
     header{display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand{display:flex;align-items:center;gap:14px}
-    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,rgba(198,155,71,0.12), rgba(198,155,71,0.02));display:flex;align-items:center;justify-content:center;font-weight:800;color:var(--gold);font-size:20px;letter-spacing:1px}
+    .logo{
+      width:56px;height:56px;border-radius:12px;
+      background:linear-gradient(135deg,rgba(198,155,71,0.12),rgba(198,155,71,0.02));
+      display:flex;align-items:center;justify-content:center;
+      font-weight:800;color:var(--gold);font-size:20px;letter-spacing:1px
+    }
     .brand h1{margin:0;font-size:18px}
     .brand p{margin:0;font-size:12px;color:var(--muted)}
-
     nav{display:flex;gap:16px}
     nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
     nav a:hover{color:#fff}
     .cta{background:linear-gradient(90deg,var(--gold),#f3d06b);color:#081019;padding:9px 14px;border-radius:10px;text-decoration:none;font-weight:700}
-
     .hero{display:flex;align-items:center;gap:28px;margin-top:26px}
-    .hero-left{flex:1;padding:28px;background:linear-gradient(180deg, rgba(255,255,255,0.02), transparent);border-radius:16px}
+    .hero-left{flex:1;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px}
     .eyebrow{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px}
     h2{margin:12px 0 8px;font-size:34px;line-height:1.05}
     p.lead{margin:0;color:var(--muted);font-size:16px}
     .actions{margin-top:18px;display:flex;gap:12px}
-
     .hero-right{width:420px}
     .card{background:var(--card);padding:18px;border-radius:14px}
-
     .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), transparent);min-height:120px}
+    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);min-height:120px}
     .service h4{margin:0 0 8px}
     .muted{color:var(--muted);font-size:14px}
-
     .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
     .portfolio .item{height:150px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.12)}
-
-    form{display:flex;flex-direction:column;gap:10px}
-    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:#fff}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:#fff;width:100%}
     button{background:linear-gradient(90deg,var(--gold),#f3d06b);border:none;padding:12px 14px;border-radius:10px;font-weight:800;cursor:pointer}
-
     footer{margin-top:30px;color:var(--muted);font-size:14px;text-align:center}
-
     @media (max-width:980px){.hero{flex-direction:column}.hero-right{width:100%}.services{grid-template-columns:repeat(2,1fr)}.portfolio{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:560px){nav{display:none}.logo{width:44px;height:44px}.wrap{padding:16px}.services{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}}
-
-    /* small accent lines */
-    .divider{height:1px;background:linear-gradient(90deg, transparent, rgba(255,255,255,0.04), transparent);margin:20px 0;border-radius:1px}
-
-    /* subtle hover */
+    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);margin:20px 0;border-radius:1px}
     .service:hover{transform:translateY(-6px);transition:all .28s}
     .portfolio .item:hover{transform:scale(1.03);transition:all .28s}
   </style>
@@ -65,11 +68,10 @@
       <div class="brand">
         <div class="logo">L</div>
         <div>
-          <h1>Lax Media</h1>
-          <p>Reklam &amp; İşletme Tanıtımı</p>
+          <h1>LuxeTanıtım</h1>
+          <p>Reklam & İşletme Tanıtımı</p>
         </div>
       </div>
-
       <nav>
         <a href="#services">Hizmetler</a>
         <a href="#portfolio">Projeler</a>
@@ -83,102 +85,53 @@
         <div class="hero-left">
           <div class="eyebrow">KURUMSAL · STRATEJİ · YARATICILIK</div>
           <h2>Markanıza lüks bir dokunuş — sade ama etkili tanıtım çözümleri.</h2>
-          <p class="lead">Lax Media, reklam ve işletme tanıtımında güçlü vizyon, premium tasarım ve sonuç odaklı stratejiler sunar. Marka kimliği, kampanya yönetimi ve yaratıcı prodüksiyon hizmetleriyle fark yaratın.</p>
-
+          <p class="lead">LuxeTanıtım, reklam ve işletme tanıtımında güçlü vizyon, premium tasarım ve sonuç odaklı stratejiler sunar.</p>
           <div class="actions">
             <a class="cta" href="#contact">Ücretsiz Keşif</a>
-            <a class="muted" href="#portfolio" style="align-self:center;padding:6px 10px;border-radius:8px;color:var(--muted);text-decoration:none">Portfolyoya Bak</a>
+            <a class="muted" href="#portfolio" style="align-self:center;padding:6px 10px;border-radius:8px;text-decoration:none">Portfolyoya Bak</a>
           </div>
 
           <div class="divider"></div>
-
           <div class="services" id="services">
-            <div class="service card">
-              <h4>Marka Stratejisi</h4>
-              <div class="muted">Hedef kitlenize uygun, ölçülebilir stratejiler kuruyoruz.</div>
-            </div>
-            <div class="service card">
-              <h4>Yaratıcı Reklam</h4>
-              <div class="muted">Kısa film, banner ve sosyal medya kampanyalarıyla etki yaratın.</div>
-            </div>
-            <div class="service card">
-              <h4>Prodüksiyon</h4>
-              <div class="muted">Fotoğrafçılık, video ve post-prodüksiyon hizmetleri.</div>
-            </div>
+            <div class="service card"><h4>Marka Stratejisi</h4><div class="muted">Hedef kitlenize uygun, ölçülebilir stratejiler kuruyoruz.</div></div>
+            <div class="service card"><h4>Yaratıcı Reklam</h4><div class="muted">Video, banner ve sosyal medya kampanyalarıyla etki yaratın.</div></div>
+            <div class="service card"><h4>Prodüksiyon</h4><div class="muted">Fotoğrafçılık, video ve post-prodüksiyon hizmetleri.</div></div>
           </div>
         </div>
 
         <aside class="hero-right">
           <div class="card">
-            <h3>Hızlı Bilgi</h3>
-            <p class="muted">Hazır paketlerimiz ve özelleştirilmiş tekliflerimiz var. Aşağıdaki form ile bize ulaşın, 24 saat içinde ön bilgiler gönderelim.</p>
-            <div style="margin-top:12px">
-              <strong>Ofis:</strong> Manisa , Türkiye
-              <br>
-              <strong>Telefon:</strong> +90 552 724 79 36
-            </div>
-          </div>
-
-          <div style="margin-top:12px" class="card">
-            <h4>Mini Portfolyo</h4>
+            <h3>Mini Portfolyo</h3>
             <div class="portfolio" id="portfolio">
               <div class="item" style="background-image:url('https://picsum.photos/seed/1/800/600')"></div>
               <div class="item" style="background-image:url('https://picsum.photos/seed/2/800/600')"></div>
               <div class="item" style="background-image:url('https://picsum.photos/seed/3/800/600')"></div>
             </div>
           </div>
-
-          <div style="margin-top:12px;text-align:center" class="card">
-            <strong>Sosyal</strong>
-            <div style="display:flex;gap:10px;justify-content:center;margin-top:10px">
-              <a href="#" aria-label="instagram" style="color:var(--muted);text-decoration:none;font-weight:700">IG</a>
-              <a href="#" aria-label="linkedin" style="color:var(--muted);text-decoration:none;font-weight:700">LI</a>
-              <a href="#" aria-label="youtube" style="color:var(--muted);text-decoration:none;font-weight:700">YT</a>
-            </div>
-          </div>
-
         </aside>
       </section>
 
       <section style="margin-top:26px" id="contact">
         <div class="card">
           <h3>İletişim & Teklif Talebi</h3>
-          <p class="muted">Aşağıdaki form demo amaçlıdır. Gerçek gönderim ister e-posta (mailto) ister backend ile bağlanabilir.</p>
-          <form onsubmit="return handleSubmit(event)">
-            <input id="name" placeholder="Adın / Şirket" required />
-            <input id="email" placeholder="E-posta" type="email" required />
-            <input id="phone" placeholder="Telefon (opsiyonel)" />
-            <textarea id="message" placeholder="Kısa proje özeti ve beklenti" rows="5" required></textarea>
-            <div style="display:flex;gap:12px;align-items:center;justify-content:space-between;margin-top:6px">
-              <div class="muted" style="font-size:13px">24 saat içinde ön bilgi gönderiyoruz (demo).</div>
-              <div style="display:flex;gap:8px">
-                <button type="submit">Teklif İste</button>
-                <a href="mailto:iletisim@luxetanitim.com?subject=Teklif%20Talebi" style="align-self:center;padding:10px 12px;border-radius:10px;text-decoration:none;background:transparent;border:1px solid rgba(255,255,255,0.04);color:var(--muted);font-weight:700">E-posta Gönder</a>
-              </div>
-            </div>
+          <p class="muted">Formu doldurun, kısa sürede dönüş yapalım. E-postanıza yanıt gönderilecektir.</p>
+
+          <!-- 🔹 Formspree bağlantını buraya ekle -->
+          <form action="https://formspree.io/f/xxxxxxx" method="POST">
+            <input name="name" placeholder="Adın / Şirket" required />
+            <input name="email" placeholder="E-posta" type="email" required />
+            <input name="phone" placeholder="Telefon (opsiyonel)" />
+            <textarea name="message" placeholder="Kısa proje özeti ve beklenti" rows="5" required></textarea>
+            <button type="submit">Teklif İste</button>
           </form>
+
         </div>
       </section>
-
     </main>
 
     <footer>
-      © Lax Media• Tasarım: Mehmet • İletişim: iletisim@luxetanitim.com
+      © LuxeTanıtım • Tasarım: Mehmet • İletişim: iletisim@luxetanitim.com
     </footer>
   </div>
-
-  <script>
-    function handleSubmit(e){
-      e.preventDefault();
-      const name=document.getElementById('name').value.trim();
-      const email=document.getElementById('email').value.trim();
-      const msg=document.getElementById('message').value.trim();
-      if(!name||!email||!msg){alert('Lütfen gerekli alanları doldurun.');return false}
-      // Demo: gösterim mesajı
-      alert('Teşekkürler ' + name + '! Mesajınız alındı (demo). E-posta ile iletişime geçebilirsiniz.');
-      e.target.reset();
-      return false;
-    }
-  </script>
 </body>
 </html>
