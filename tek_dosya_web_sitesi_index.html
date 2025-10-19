@@ -4,62 +4,79 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <title>LuxeTanıtım — Reklam & İşletme Tanıtımı</title>
-  <meta name="description" content="LuxeTanıtım ." />
+  <meta name="description" content="LuxeTanıtım - Reklam & İşletme Tanıtımı." />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
   <style>
-    :root{
-      --bg:#060609;
-      --card:rgba(255,255,255,0.03);
+    :root {
+      --bg:#ffffff;
+      --text:#111111;
+      --card:rgba(0,0,0,0.04);
       --gold:#c69b47;
-      --muted:rgba(255,255,255,0.6);
-      --container:1100px
+      --muted:rgba(0,0,0,0.6);
+      --container:1100px;
     }
-    *{box-sizing:border-box}
+
+    *{box-sizing:border-box;margin:0;padding:0}
     html,body{height:100%}
     body{
-      margin:0;
       font-family:Inter,system-ui,-apple-system,'Segoe UI',Roboto,Arial;
-      color:#fff;
-      background:linear-gradient(180deg,#050508 0%,#0b0b10 100%);
-      -webkit-font-smoothing:antialiased
+      color:var(--text);
+      background:var(--bg);
+      -webkit-font-smoothing:antialiased;
     }
+
     .wrap{max-width:var(--container);margin:36px auto;padding:28px}
     header{display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand{display:flex;align-items:center;gap:14px}
     .logo{
       width:56px;height:56px;border-radius:12px;
-      background:linear-gradient(135deg,rgba(198,155,71,0.12),rgba(198,155,71,0.02));
+      background:linear-gradient(135deg,rgba(198,155,71,0.15),rgba(198,155,71,0.05));
       display:flex;align-items:center;justify-content:center;
-      font-weight:800;color:var(--gold);font-size:20px;letter-spacing:1px
+      font-weight:800;color:var(--gold);font-size:20px;letter-spacing:1px;
     }
     .brand h1{margin:0;font-size:18px}
     .brand p{margin:0;font-size:12px;color:var(--muted)}
     nav{display:flex;gap:16px}
     nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
-    nav a:hover{color:#fff}
-    .cta{background:linear-gradient(90deg,var(--gold),#f3d06b);color:#081019;padding:9px 14px;border-radius:10px;text-decoration:none;font-weight:700}
+    nav a:hover{color:var(--gold)}
+    .cta{
+      background:linear-gradient(90deg,var(--gold),#f3d06b);
+      color:#fff;
+      padding:9px 14px;
+      border-radius:10px;
+      text-decoration:none;
+      font-weight:700;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
+
     .hero{display:flex;align-items:center;gap:28px;margin-top:26px}
-    .hero-left{flex:1;padding:28px;background:linear-gradient(180deg,rgba(255,255,255,0.02),transparent);border-radius:16px}
+    .hero-left{flex:1;padding:28px;background:rgba(0,0,0,0.02);border-radius:16px}
     .eyebrow{color:var(--gold);font-weight:700;font-size:13px;letter-spacing:1px}
-    h2{margin:12px 0 8px;font-size:34px;line-height:1.05}
+    h2{margin:12px 0 8px;font-size:34px;line-height:1.05;color:var(--text)}
     p.lead{margin:0;color:var(--muted);font-size:16px}
     .actions{margin-top:18px;display:flex;gap:12px}
     .hero-right{width:420px}
     .card{background:var(--card);padding:18px;border-radius:14px}
     .services{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:20px}
-    .service{padding:18px;border-radius:12px;background:linear-gradient(180deg,rgba(255,255,255,0.01),transparent);min-height:120px}
+    .service{padding:18px;border-radius:12px;background:rgba(0,0,0,0.02);min-height:120px;transition:all .28s}
+    .service:hover{transform:translateY(-6px)}
     .service h4{margin:0 0 8px}
     .muted{color:var(--muted);font-size:14px}
     .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
-    .portfolio .item{height:150px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1000px rgba(0,0,0,0.12)}
-    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:12px;border-radius:10px;color:#fff;width:100%}
-    button{background:linear-gradient(90deg,var(--gold),#f3d06b);border:none;padding:12px 14px;border-radius:10px;font-weight:800;cursor:pointer}
+    .portfolio .item{height:150px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1000px rgba(255,255,255,0.1);transition:all .28s}
+    .portfolio .item:hover{transform:scale(1.03)}
+    input,textarea{background:#fff;border:1px solid rgba(0,0,0,0.1);padding:12px;border-radius:10px;color:#111;width:100%}
+    button{
+      background:linear-gradient(90deg,var(--gold),#f3d06b);
+      border:none;padding:12px 14px;
+      border-radius:10px;font-weight:800;
+      cursor:pointer;color:#fff;
+      box-shadow:0 2px 6px rgba(0,0,0,0.1);
+    }
     footer{margin-top:30px;color:var(--muted);font-size:14px;text-align:center}
+    .divider{height:1px;background:rgba(0,0,0,0.06);margin:20px 0;border-radius:1px}
     @media (max-width:980px){.hero{flex-direction:column}.hero-right{width:100%}.services{grid-template-columns:repeat(2,1fr)}.portfolio{grid-template-columns:repeat(2,1fr)}}
     @media (max-width:560px){nav{display:none}.logo{width:44px;height:44px}.wrap{padding:16px}.services{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}}
-    .divider{height:1px;background:linear-gradient(90deg,transparent,rgba(255,255,255,0.04),transparent);margin:20px 0;border-radius:1px}
-    .service:hover{transform:translateY(-6px);transition:all .28s}
-    .portfolio .item:hover{transform:scale(1.03);transition:all .28s}
   </style>
 </head>
 <body>
@@ -116,7 +133,6 @@
           <h3>İletişim & Teklif Talebi</h3>
           <p class="muted">Formu doldurun, kısa sürede dönüş yapalım. E-postanıza yanıt gönderilecektir.</p>
 
-          <!-- 🔹 Formspree bağlantını buraya ekle -->
           <form action="https://formspree.io/f/xxxxxxx" method="POST">
             <input name="name" placeholder="Adın / Şirket" required />
             <input name="email" placeholder="E-posta" type="email" required />
@@ -124,80 +140,13 @@
             <textarea name="message" placeholder="Kısa proje özeti ve beklenti" rows="5" required></textarea>
             <button type="submit">Teklif İste</button>
           </form>
-
         </div>
       </section>
     </main>
 
-    <!doctype html>
-<html lang="tr">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>LuxeTanıtım - Reklam & İşletme Tanıtımı</title>
-</head>
-<body>
-  <header>
-    <h1>LuxeTanıtım</h1>
-    <p>Reklam · Tasarım · İşletme Tanıtımı</p>
-    <nav>
-      <a href="#services">Hizmetler</a> |
-      <a href="#portfolio">Projeler</a> |
-      <a href="#contact">İletişim</a>
-    </nav>
-  </header>
-
-  <main>
-    <section id="intro">
-      <h2>Hoş Geldiniz</h2>
-      <p>
-        LuxeTanıtım; sade ama lüks hissettiren reklam, işletme tanıtımı ve dijital tasarım çözümleri sunar.
-      </p>
-    </section>
-
-    <section id="services">
-      <h2>Hizmetlerimiz</h2>
-      <ul>
-        <li>Marka Stratejisi</li>
-        <li>Yaratıcı Reklam Çalışmaları</li>
-        <li>Prodüksiyon ve Görsel Tasarım</li>
-      </ul>
-    </section>
-
-    <section id="portfolio">
-      <h2>Projeler</h2>
-      <p>Geçmişte çalıştığımız bazı örnek projeler:</p>
-      <ul>
-        <li>Kurumsal Tanıtım Kampanyası</li>
-        <li>Yeni Marka Lansman Videosu</li>
-        <li>Premium Sosyal Medya Yönetimi</li>
-      </ul>
-    </section>
-
-    <section id="contact">
-      <h2>İletişim</h2>
-      <p>Formu doldurun, size en kısa sürede dönüş yapalım.</p>
-      <!-- 🔹 Formspree bağlantını buraya ekle -->
-      <form action="https://formspree.io/f/xxxxxxx" method="POST">
-        <label>Ad / Şirket:</label><br>
-        <input type="text" name="name" required><br><br>
-
-        <label>E-posta:</label><br>
-        <input type="email" name="email" required><br><br>
-
-        <label>Telefon (opsiyonel):</label><br>
-        <input type="text" name="phone"><br><br>
-
-        <label>Mesajınız:</label><br>
-        <textarea name="message" rows="5" required></textarea><br><br>
-
-        <button type="submit">Gönder</button>
-      </form>
-    </section>
-  </main>
-
-  <footer>
-    <p>© 2025 LuxeTanıtım — Reklam & İşletme Tanıtımı</p>
-  </footer>
+    <footer>
+      <p>© 2025 LuxeTanıtım — Reklam & İşletme Tanıtımı</p>
+    </footer>
+  </div>
 </body>
 </html>
