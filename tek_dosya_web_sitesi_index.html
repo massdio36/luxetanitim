@@ -26,24 +26,18 @@
     }
 
     .wrap{max-width:var(--container);margin:36px auto;padding:28px}
-    header{
-      display:flex;
-      align-items:center;
-      justify-content:space-between;
-      gap:18px;
-      background-color:white;
-      padding:16px 24px;
-      border-radius:12px;
-      box-shadow:0 2px 8px rgba(0,0,0,0.05);
-    }
+    header{display:flex;align-items:center;justify-content:space-between;gap:18px}
     .brand{display:flex;align-items:center;gap:14px}
     .brand img{
-      width:70px;
+      width:64px;
       height:auto;
       border-radius:10px;
       object-fit:contain;
+      background:#fff;
+      box-shadow:0 2px 6px rgba(0,0,0,0.05);
+      padding:4px;
     }
-    .brand h1{margin:0;font-size:20px}
+    .brand h1{margin:0;font-size:18px}
     .brand p{margin:0;font-size:12px;color:var(--muted)}
     nav{display:flex;gap:16px}
     nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
@@ -88,11 +82,14 @@
     @media (max-width:560px){nav{display:none}.brand img{width:52px}.wrap{padding:16px}.services{grid-template-columns:1fr}.portfolio{grid-template-columns:1fr}}
   </style>
 </head>
+
 <body>
   <div class="wrap">
+
+    <!-- ✅ Düzenlenmiş Header -->
     <header>
       <div class="brand">
-        <img src="lax media.jpg" alt="Lax Media Logo">
+        <img src="lax media.jpg" alt="Lax Media">
         <div>
           <h1>Lax Media</h1>
           <p>Reklam & İşletme Tanıtımı</p>
@@ -105,6 +102,7 @@
         <a class="cta" href="#contact">Teklif Al</a>
       </nav>
     </header>
+    <!-- ✅ Header sonu -->
 
     <main>
       <section class="hero">
