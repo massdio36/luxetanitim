@@ -46,7 +46,7 @@
     .brand h1{margin:0;font-size:20px}
     .brand p{margin:0;font-size:12px;color:var(--muted)}
     nav{display:flex;gap:16px}
-    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600}
+    nav a{color:var(--muted);text-decoration:none;padding:8px 10px;border-radius:8px;font-weight:600;transition:color .2s ease}
     nav a:hover{color:var(--gold)}
     .cta{
       background:linear-gradient(90deg,var(--gold),#f3d06b);
@@ -56,7 +56,9 @@
       text-decoration:none;
       font-weight:700;
       box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      transition:opacity .2s ease;
     }
+    .cta:hover{opacity:0.9}
 
     .hero{display:flex;align-items:center;gap:28px;margin-top:26px}
     .hero-left{flex:1;padding:28px;background:rgba(0,0,0,0.02);border-radius:16px}
@@ -74,14 +76,16 @@
     .portfolio{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:18px}
     .portfolio .item{height:150px;border-radius:10px;overflow:hidden;background-size:cover;background-position:center;box-shadow:inset 0 0 0 1000px rgba(255,255,255,0.1);transition:all .28s}
     .portfolio .item:hover{transform:scale(1.03)}
-    input,textarea{background:#fff;border:1px solid rgba(0,0,0,0.1);padding:12px;border-radius:10px;color:#111;width:100%}
+    input,textarea{background:#fff;border:1px solid rgba(0,0,0,0.1);padding:12px;border-radius:10px;color:#111;width:100%;font-family:inherit}
     button{
       background:linear-gradient(90deg,var(--gold),#f3d06b);
       border:none;padding:12px 14px;
       border-radius:10px;font-weight:800;
       cursor:pointer;color:#fff;
       box-shadow:0 2px 6px rgba(0,0,0,0.1);
+      transition:opacity .2s ease;
     }
+    button:hover{opacity:0.9}
     footer{margin-top:30px;color:var(--muted);font-size:14px;text-align:center}
     .divider{height:1px;background:rgba(0,0,0,0.06);margin:20px 0;border-radius:1px}
     @media (max-width:980px){.hero{flex-direction:column}.hero-right{width:100%}.services{grid-template-columns:repeat(2,1fr)}.portfolio{grid-template-columns:repeat(2,1fr)}}
@@ -92,7 +96,7 @@
   <div class="wrap">
     <header>
       <div class="brand">
-        <img src="lax media.jpg" alt="Lax Media Logo">
+        <img src="lax media.jpg" alt="Lax Media Logosu">
         <div>
           <h1>Lax Media</h1>
           <p>Reklam & İşletme Tanıtımı</p>
@@ -129,9 +133,9 @@
           <div class="card">
             <h3>Mini Portfolyo</h3>
             <div class="portfolio" id="portfolio">
-              <div class="item" style="background-image:url('https://picsum.photos/seed/1/800/600')"></div>
-              <div class="item" style="background-image:url('https://picsum.photos/seed/2/800/600')"></div>
-              <div class="item" style="background-image:url('https://picsum.photos/seed/3/800/600')"></div>
+              <div class="item" style="background-image:url('https://picsum.photos/seed/1/800/600')" aria-label="Proje 1"></div>
+              <div class="item" style="background-image:url('https://picsum.photos/seed/2/800/600')" aria-label="Proje 2"></div>
+              <div class="item" style="background-image:url('https://picsum.photos/seed/3/800/600')" aria-label="Proje 3"></div>
             </div>
           </div>
         </aside>
@@ -142,7 +146,7 @@
           <h3>İletişim & Teklif Talebi</h3>
           <p class="muted">Formu doldurun, kısa sürede dönüş yapalım. E-postanıza yanıt gönderilecektir.</p>
 
-          <form action="https://formspree.io/f/xxxxxxx" method="POST">
+          <form action="https://formspree.io/f/xqayojev" method="POST" target="_blank">
             <input name="name" placeholder="Adın / Şirket" required />
             <input name="email" placeholder="E-posta" type="email" required />
             <input name="phone" placeholder="Telefon (opsiyonel)" />
